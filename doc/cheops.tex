@@ -1,7 +1,8 @@
-% $Id: cheops.tex,v 1.4 2003-12-07 20:43:48 psy Exp $
+% $Id: cheops.tex,v 1.5 2003-12-08 09:46:52 psy Exp $
 
 \documentclass[a4paper]{article}
 \usepackage{url}
+\usepackage{html}
 \usepackage{mdwlist}
 
 % Determines whether or not we are running pdflatex
@@ -61,6 +62,8 @@ In addition to legal moves, the following commands are also available
 as responses for human players. At the end of a game, no further moves
 are possible, and one of these commands must be entered.
 
+
+\begin{latexonly}
 \renewenvironment{description}{%
   \begin{basedescript}{%
       \desclabelwidth{0.66in}\desclabelstyle{\nextlinelabel}%
@@ -68,6 +71,7 @@ are possible, and one of these commands must be entered.
 }{%
   \end{basedescript}%
 }
+\end{latexonly}
 
 \begin{description}
 \item[\texttt{resign}] forfeit the match
