@@ -1,4 +1,4 @@
-# $Id: Makefile.am,v 1.1 2003-12-06 17:30:58 psy Exp $
+# $Id: Makefile.am,v 1.2 2003-12-06 17:48:17 psy Exp $
 #
 # Copyright (C) 2003 Tristan Miller <psychonaut@nothingisreal.com>
 #  
@@ -12,6 +12,6 @@
 # PURPOSE.
 
 bin_PROGRAMS = cheops
-hello_SOURCES = cheops.cpp ChessBoard.cpp ComputerPlayer.cpp HumanPlayer.cpp move.cpp Player.cpp StdAfx.cpp
+cheops_SOURCES = cheops.cpp ChessBoard.cpp ComputerPlayer.cpp HumanPlayer.cpp move.cpp Player.cpp StdAfx.cpp
 
 
