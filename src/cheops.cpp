@@ -1,4 +1,4 @@
-// $Id: cheops.cpp,v 1.5 2003-12-06 17:43:11 psy Exp $
+// $Id: cheops.cpp,v 1.6 2003-12-07 19:43:33 psy Exp $
 //
 // cheops.cpp : Defines the entry point for the console application.
 //
@@ -35,6 +35,8 @@
 void show_menu(void);
 move *parse_move(const string& s);
 void who_plays(Player *&w, Player *&b);
+void show_help(void);
+void show_version(void);
 
 int main(int argc, char* argv[]) {
 
@@ -45,17 +47,36 @@ int main(int argc, char* argv[]) {
     move *m = NULL;
     int turn=0;
 
+    // Process command-line parameters
+    while (argc-- > 1) {
+      argv++;
+      if (strcmp(*argv, "--help") == 0) {
+	show_help();
+	exit(0);
+      }
+      else if (strcmp(*argv, "--version") == 0) {
+	show_version();
+	exit(0);
+      }
+      else {
+	cerr << "cheops: unrecognized option `" << argv[0] << "'\n";
+	show_help();
+	exit(1);
+      }
+    }
+
     // Print title screen
-    cout << "\t\t\t__   __\n"
-            "\t\t\t\\ \\ / /      Cheops v1.0\n"
-            "\t\t\t \\ v / ___ ___  _  _  _\n"
-            "\t\t\t  > < / __) _ \\| || || |\n"
-            "\t\t\t / ^ \\> _| (_) ) \\| |/ |\n"
-            "\t\t\t/_/ \\_\\___)___/ \\_   _/\n"
-            "\t\t\t _________________| |__\n"
-            "\t\t\t(_________________|_|__)\n\n"
-            "\t\t\tCopyright (C) 1999, 2000 Tristan Miller\n"
-            "\t\t\thttp://www.nothingisreal.com/cheops/\n\n";
+    show_version();
+    cout <<
+      "\t\t\t__   __\n"
+      "\t\t\t\\ \\ / /\n"
+      "\t\t\t \\ v / ___ ___  _  _  _\n"
+      "\t\t\t  > < / __) _ \\| || || |\n"
+      "\t\t\t / ^ \\> _| (_) ) \\| |/ |\n"
+      "\t\t\t/_/ \\_\\___)___/ \\_   _/\n"
+      "\t\t\t _________________| |__\n"
+      "\t\t\t(_________________|_|__)\n\n"
+      ;
 
     who_plays(w_player, b_player);
 
@@ -272,4 +293,22 @@ void who_plays(Player *&w, Player *&b) {
         else
             b->set_stats();
     }
+}
+
+void show_help(void) {
+  cerr <<
+    "Usage: cheops [options]\n"
+    "Options:\n"
+    "--help     Display this information and exit\n"
+    "--version  Display version information and exit\n"
+    ;
+}
+
+void show_version(void) {
+  cout <<
+    PACKAGE_STRING "\n"
+    "Copyright (C) 1999, 2000, 2003 Tristan Miller\n"
+    "This is free software; see the source for copying conditions.  There is NO\n"
+    "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
+    ;
 }
