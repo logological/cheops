@@ -1,0 +1,4 @@
+# $Id: #
+Redirect /cheops/cheops.tar.bz2 /cheops/cheops-1.1.tar.bz2
+Redirect seeother /cheops/cheops.tar.gz /cheops/cheops.tar.bz2
+Redirect seeother /cheops/cheops-1.0.tar.gz /cheops/cheops-1.0.tar.bz2
