@@ -1,4 +1,4 @@
-// $Id: cheops.cpp,v 1.2 2003-11-24 21:14:13 psy Exp $
+// $Id: cheops.cpp,v 1.3 2003-12-05 14:10:00 psy Exp $
 //
 // cheops.cpp : Defines the entry point for the console application.
 
@@ -7,6 +7,7 @@
 #include "HumanPlayer.h"
 #include "ComputerPlayer.h"
 #include <cstdio>
+#include <cstring>
 
 void show_menu(void);
 move *parse_move(const string& s);
