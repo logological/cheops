@@ -1,4 +1,4 @@
-# $Id: Makefile.am,v 1.3 2003-12-06 20:30:45 psy Exp $
+# $Id: Makefile.am,v 1.4 2003-12-07 20:59:23 psy Exp $
 #
 # Copyright (C) 2003 Tristan Miller <psychonaut@nothingisreal.com>
 #  
@@ -10,7 +10,9 @@
 # the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 # PURPOSE.
 
-EXTRA_DIST = doc/cheops.tex doc/cheops.pdf
+AUTOMAKE_OPTIONS = dist-bzip2 dist-zip
+man_MANS = doc/cheops.6
+EXTRA_DIST = doc/cheops.tex doc/cheops.pdf doc/cheops.dvi $(man_MANS)
 SUBDIRS = src
 
 
