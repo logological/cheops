@@ -1,5 +1,11 @@
-Welcome to Cheops, an AI chess engine.
+Welcome to CHEOPS, an AI chess engine.
 
-Cheops is free software. Please see the file COPYING for details.
-For documentation please see the files in the doc subdirectory.
+CHEOPS is free software. Please see the file COPYING for details.
+
+The doc subdirectory contains a Unix man page describing how to use
+CHEOPS.  There is also a LaTeX file (preprocessed into DVI and PDF
+formats) which contains the text of the man page plus information of
+interest to programmers wishing to understand or extend CHEOPS.  Only
+the man page is installed by default.
+
 For building and installation instructions please see the INSTALL file.
