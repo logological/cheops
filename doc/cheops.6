@@ -1,0 +1,95 @@
+.TH CHEOPS 6 \" -*- nroff -*-
+.SH NAME
+CHEOPS \- Chess Opponent Simulator
+.SH SYNOPSIS
+  cheops [\-\-help] [\-\-version]
+.SH DESCRIPTION
+.P
+Cheops (CHEss OPponent Simulator) is a fully-functional chess program
+capable of human-vs-human, human-vs-computer, and computer-vs-computer
+play.
+.SH OPTIONS
+.P
+.TP
+.BI "\-\-help" ""
+Display a short help message and exit.
+.TP
+.BI "\-\-version" ""
+Display version information and exit.
+.SH GAMEPLAY
+Once invoked, CHEOPS displays a title screen and prompts the user for
+who controls each player. If a computer opponent is chosen, a list of
+default static evaluation function weights is displayed.  To accept
+the default values, type \fBdone\fR; otherwise, enter the number of
+the weight to change. The program will then prompt for the new value.
+The program will allow the user to adjust the weights until \fBdone\fR
+is entered.
+.P
+Following player setup, the board is displayed and the game begins.
+The board is represented by a simple text diagram using the standard
+one-character piece abbreviations; white pieces are represented by
+small letters and black pieces by capitals.  Each player makes his
+move in turn; human players are prompted for their move, and computer
+players move automatically. To make a move, enter the source and
+destination coordinates in standard algebraic notation -- for example,
+\fBg1f3\fR moves the knight at g1 to f3.  For pawn promotions, the
+promotion piece must be appended -- for instance, \fBe7e8n\fR promotes
+to a knight. For castling, the user may either enter the source and
+destination coordinates of the king, or he may simply type \fBo-o\fR
+or \fBo-o-o\fR for kingside or queenside castling, respectively. The
+players may continue entering moves in this manner until a checkmate
+or draw state is reached. As in regular chess, a draw occurs upon
+stalemate, triple observance of the same board configuration with the
+same side to move, or observance of fifty moves without a capture or
+pawn advance.
+.P
+In addition to legal moves, the following commands are also available
+as responses for human players. At the end of a game, no further moves
+are possible, and one of these commands must be entered.
+.TP
+.BI "help" ""
+display command summary
+.TP
+.BI "resign" ""
+forfeit the match
+.TP
+.BI "bd" ""
+redisplay the board
+.TP
+.BI "coords" ""
+toggle display of board coordinates
+.TP
+.BI "reverse" ""
+reverse board display (black on top to white on top, or vice versa)
+.TP
+.BI "think" ""
+toggle display of computer ``thinking''
+.TP
+.BI "log" ""
+display log of moves for the current game
+.TP
+.BI "save" ""
+save the move log to a file
+.TP
+.BI "new" ""
+start a new game (board in initial configuration with white to move)
+.TP
+.BI "who" ""
+set players and computer stats, if applicable
+.TP
+.BI "quit" ""
+exit the program
+.SH BUGS
+Report bugs to <psychonaut@nothingisreal.com>.
+.SH SEE ALSO
+gnuchess(6), chesstool(6), xboard(6)
+.P
+CHEOPS home page: http://www.nothingisreal.com/cheops/
+.SH AUTHOR
+Tristan Miller <psychonaut@nothingisreal.com>.
+.SH COPYRIGHT
+Copyright (C) 1999, 2000, 2003 Tristan Miller.
+.P
+Permission is granted to make and distribute verbatim or modified
+copies of this manual provided the copyright notice and this
+permission notice are preserved on all copies.
