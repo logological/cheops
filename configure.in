@@ -1,0 +1,23 @@
+#                                               -*- Autoconf -*-
+# Process this file with autoconf to produce a configure script.
+#
+# $Id: configure.in,v 1.1 2003-12-06 17:34:52 psy Exp $
+
+AC_PREREQ(2.57)
+AC_INIT(cheops, 1.1, psychonaut@nothingisreal.com)
+AC_CONFIG_SRCDIR([src/ChessTypes.h])
+AC_CONFIG_HEADER([config.h])
+
+# Checks for programs.
+AC_PROG_CXX
+
+# Checks for libraries.
+
+# Checks for header files.
+
+# Checks for typedefs, structures, and compiler characteristics.
+
+# Checks for library functions.
+
+AC_CONFIG_FILES([src/Makefile])
+AC_OUTPUT
