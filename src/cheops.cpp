@@ -1,4 +1,4 @@
-// $Id: cheops.cpp,v 1.4 2003-12-06 16:44:51 psy Exp $
+// $Id: cheops.cpp,v 1.5 2003-12-06 17:43:11 psy Exp $
 //
 // cheops.cpp : Defines the entry point for the console application.
 //
@@ -20,6 +20,10 @@
 // 02111-1307, USA.
 //
 //////////////////////////////////////////////////////////////////////
+
+#ifdef HAVE_CONFIG_H
+#include <config.h>
+#endif
 
 #include "stdafx.h"
 #include "ChessBoard.h"
