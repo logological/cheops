@@ -1,18 +1,27 @@
-% $Id: cheops.tex,v 1.3 2003-12-06 20:27:11 psy Exp $
+% $Id: cheops.tex,v 1.4 2003-12-07 20:43:48 psy Exp $
 
 \documentclass[a4paper]{article}
 \usepackage{url}
 \usepackage{mdwlist}
+
+% Determines whether or not we are running pdflatex
+\newif\ifpdf
+\ifx\pdfoutput\undefined
+\pdffalse
+\else
+\pdftrue
+\pdfcompresslevel=9
+\fi
+
 \def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
 
 \begin{document}
 
-\title{\textsc{Cheops} v1.1\\User Manual}
-\author{Tristan Miller\\ \url{psychonaut@nothingisreal.com}\\ \url{http://www.nothingisreal.com/cheops/}}
-\date{4 December 2003}
+\title{\textsc{Cheops} v1.1\\Manual for Users and Programmers}
+\author{Tristan Miller\\ \url{psychonaut@nothingisreal.com}\\ 
+  \url{http://www.nothingisreal.com/cheops/}}
+\date{7 December 2003}
 \maketitle
-\tableofcontents
-\pagebreak
 
 \section{Introduction}
 
@@ -20,29 +29,15 @@ This document describes \textsc{Cheops} (\textsc{Ch}ess
 \textsc{o}pponent \textsc{s}imulator), an object-oriented
 chess-playing program.
 
-\section{Compiling \textsc{Cheops}}
-
-A standard Makefile is provided; under most Unix systems simply typing
-\texttt{make} will suffice.  For other systems, simply compile all the
-\texttt{.cpp} files and link in the \CC\ math and standard template
-libraries.  Use your compiler's optimization switch if desired.  Here
-is an example which works with the GNU \CC\ Compiler:
-
-\begin{quote}
-\texttt{g++ -O3 -o cheops.exe cheops.cpp ChessBoard.cpp StdAfx.cpp Player.cpp HumanPlayer.cpp ComputerPlayer.cpp move.cpp -lstd++ -lm}
-\end{quote}
-
 \section{Running \textsc{Cheops}}
 
-To start the program, simply type \texttt{cheops} at the command line.
-There are no command-line parameters. Once \textsc{Cheops} is invoked,
-the program displays a title screen and prompts the user for who
-controls each player. If a computer opponent is chosen, a list of
-default static evaluation function weights is displayed.  To accept
-the default values, type \texttt{done}; otherwise, enter the number of
-the weight to change. The program will then prompt for the new value.
-The program will allow the user to adjust the weights until
-\texttt{done} is entered.
+Once invoked, \textsc{Cheops} displays a title screen and prompts the
+user for who controls each player. If a computer opponent is chosen, a
+list of default static evaluation function weights is displayed.  To
+accept the default values, type \texttt{done}; otherwise, enter the
+number of the weight to change. The program will then prompt for the
+new value.  The program will allow the user to adjust the weights
+until \texttt{done} is entered.
 
 Following player setup, the board is displayed and the game begins.
 The board is represented by a simple text diagram using the standard
@@ -278,15 +273,19 @@ includes a scroll-back buffer.  Because of the highly modularized
 nature of the \textsc{Cheops} source code, it would not be difficult
 to add a system-dependent GUI for input and output.
 
-\section{Licence}
+\section{Copyright}
 
-This manual and the software it accompanies is Copyright \copyright\ 
-1999, 2000, 2003 Tristan Miller.  \textsc{Cheops} is Free Software. It
-can be freely used, modified, and distributed under the terms of the
-GNU General Public Licence.  You should have received a copy of the
-GNU General Public Licence along with this program in the file
-COPYING; if not, write to the Free Software Foundation, Inc., 59
-Temple Place---Suite 330, Boston, MA 02111--1307, USA.
+Copyright \copyright\ 1999, 2000, 2003 Tristan Miller.  Permission is
+granted to make and distribute verbatim or modified copies of this
+manual provided the copyright notice and this permission notice are
+preserved on all copies.
+
+\textsc{Cheops} is Free Software. It can be freely used, modified, and
+distributed under the terms of the GNU General Public Licence.  You
+should have received a copy of the GNU General Public Licence along
+with this program in the file \texttt{COPYING}; if not, write to the
+Free Software Foundation, Inc., 59 Temple Place---Suite 330, Boston,
+MA 02111--1307, USA.
 
 \begin{thebibliography}{99}
 
