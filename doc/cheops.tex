@@ -1,28 +1,34 @@
-\documentclass[12pt]{article}
+% $Id: cheops.tex,v 1.2 2003-12-04 15:13:06 psy Exp $
+
+\documentclass[a4paper]{article}
 \usepackage{url}
-\usepackage{utopia}
-\usepackage[pdftex]{graphicx}
+\usepackage{mdwlist}
+%\usepackage{utopia}
+%\usepackage{graphicx}
+\def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
 
 \begin{document}
 
-\title{\textsc{Cheops} v1.0\\User Manual}
+\title{\textsc{Cheops} v1.1\\User Manual}
 \author{Tristan Miller\\ \url{psychonaut@nothingisreal.com}\\ \url{http://www.nothingisreal.com/cheops/}}
+\date{4 December 2003}
 \maketitle
 \tableofcontents
 \pagebreak
 
 \section{Introduction}
 
-This paper describes \textsc{Cheops} (\textsc{Ch}ess \textsc{o}pponent
-\textsc{s}imulator), an object-oriented chess-playing program.
+This document describes \textsc{Cheops} (\textsc{Ch}ess
+\textsc{o}pponent \textsc{s}imulator), an object-oriented
+chess-playing program.
 
 \section{Compiling \textsc{Cheops}}
 
 A standard Makefile is provided; under most Unix systems simply typing
 \texttt{make} will suffice.  For other systems, simply compile all the
-\texttt{.cpp} files and link in the C++ math and standard template
+\texttt{.cpp} files and link in the \CC\ math and standard template
 libraries.  Use your compiler's optimization switch if desired.  Here
-is an example which works with the GNU C++ Compiler:
+is an example which works with the GNU \CC\ Compiler:
 
 \begin{quote}
 \texttt{g++ -O3 -o cheops.exe cheops.cpp ChessBoard.cpp StdAfx.cpp Player.cpp HumanPlayer.cpp ComputerPlayer.cpp move.cpp -lstd++ -lm}
@@ -30,78 +36,60 @@ is an example which works with the GNU C++ Compiler:
 
 \section{Running \textsc{Cheops}}
 
-Due to the limitations of its Spartan user interface, it is
-recommended that \textsc{Cheops} be run in a text mode supporting at
-least fifty lines. In MS-DOS, this may be accomplished by typing
-\texttt{mode con lines=50}. If launching the program from a Windows
-95/98 shortcut, activate the shortcut properties window and select an
-appropriate screen size from \emph{Initial size} drop-down list box
-under the \emph{Screen} tab.
-
-\begin{figure}[htbp]
-  \begin{center}
-    \includegraphics[width=6cm]{cheops1.png}
-    \caption{Setting the static evaluation function weights}
-    \label{fig:weights}
-  \end{center}
-\end{figure}
-
 To start the program, simply type \texttt{cheops} at the command line.
 There are no command-line parameters. Once \textsc{Cheops} is invoked,
 the program displays a title screen and prompts the user for who
 controls each player. If a computer opponent is chosen, a list of
-default static evaluation function weights is displayed. (See Figure
-\ref{fig:weights}.)  To accept the default values, type \texttt{done};
-otherwise, enter the number of the weight to change. The program will
-then prompt for the new value. The program will allow the user to
-adjust the weights until \texttt{done} is entered.
-
-\begin{figure}[t]
-  \begin{center}
-    \includegraphics[width=6cm]{cheops2.png}
-    \caption{Moving pieces}
-    \label{fig:move}
-  \end{center}
-\end{figure}
-
+default static evaluation function weights is displayed.  To accept
+the default values, type \texttt{done}; otherwise, enter the number of
+the weight to change. The program will then prompt for the new value.
+The program will allow the user to adjust the weights until
+\texttt{done} is entered.
 
 Following player setup, the board is displayed and the game begins.
-The board is represented by a simple ASCII diagram using the standard
+The board is represented by a simple text diagram using the standard
 one-character piece abbreviations; white pieces are represented by
 small letters and black pieces by capitals.  Each player makes his
 move in turn; human players are prompted for their move, and computer
 players move automatically. To make a move, enter the source and
 destination coordinates in standard algebraic notation---for example,
-\texttt{g1f3} moves the knight at g1 to f3.  (See Figure
-\ref{fig:move}.) For pawn promotions, the promotion piece must be
-appended---for instance, \texttt{e7e8n} promotes to a knight. For
-castling, the user may either enter the source and destination
-coordinates of the king, or he may simply type \texttt{o-o} or
-\texttt{o-o-o} for kingside or queenside castling, respectively. The
-players may continue entering moves in this manner until a checkmate
-or draw state is reached. As in regular chess, a draw occurs upon
-stalemate, triple observance of the same board configuration with the
-same side to move, or observance of fifty moves without a capture or
-pawn advance.
+\texttt{g1f3} moves the knight at g1 to f3.  For pawn promotions, the
+promotion piece must be appended---for instance, \texttt{e7e8n}
+promotes to a knight. For castling, the user may either enter the
+source and destination coordinates of the king, or he may simply type
+\texttt{o-o} or \texttt{o-o-o} for kingside or queenside castling,
+respectively. The players may continue entering moves in this manner
+until a checkmate or draw state is reached. As in regular chess, a
+draw occurs upon stalemate, triple observance of the same board
+configuration with the same side to move, or observance of fifty moves
+without a capture or pawn advance.
 
 In addition to legal moves, the following commands are also available
 as responses for human players. At the end of a game, no further moves
 are possible, and one of these commands must be entered.
 
+\renewenvironment{description}{%
+  \begin{basedescript}{%
+      \desclabelwidth{0.66in}\desclabelstyle{\nextlinelabel}%
+  }%
+}{%
+  \end{basedescript}%
+}
+
 \begin{description}
-\item[resign] forfeits the match
-\item[bd] redisplays the board
-\item[coords] toggles display of board coordinates
-\item[reverse] reverses board display (black on top to white on top, or vice versa)
-\item[think] toggles display of computer ``thinking''
-\item[log] display log of moves for the current game
-\item[save] saves the move log to a file
-\item[new] starts a new game (board in initial configuration with white to move)
-\item[who] set players and computer stats, if applicable
-\item[quit] exits the program
+\item[\texttt{resign}] forfeit the match
+\item[\texttt{bd}] redisplay the board
+\item[\texttt{coords}] toggle display of board coordinates
+\item[\texttt{reverse}] reverse board display (black on top to white on top, or vice versa)
+\item[\texttt{think}] toggle display of computer ``thinking''
+\item[\texttt{log}] display log of moves for the current game
+\item[\texttt{save}] save the move log to a file
+\item[\texttt{new}] start a new game (board in initial configuration with white to move)
+\item[\texttt{who}] set players and computer stats, if applicable
+\item[\texttt{quit}] exit the program
 \end{description}
 
-\section{Development}
+\section{Implementation}
 
 \subsection{Program structure}
 
@@ -109,17 +97,12 @@ are possible, and one of these commands must be entered.
 provides an interface and ties everything together. The
 \texttt{ChessBoard} class is at the heart of the program; it is a
 fully encapsulated data structure allowing for the manipulation of
-chessboards and the pieces thereon contained. The board itself is
-represented by a privately-declared 64-element array, each cell
-containing an enum value representing the type and colour of the
-piece.\footnote{In the early stages of design, the idea of defining a
-  separate class for each piece type, complete with movement rules,
-  was contemplated.  Following admonisitns from other C++/Java
-  programmers who had followed this route and found it to
-  unnecessarily complicate and slow their code \cite{smaaland}, this
-  approach was decided against.} There are also numerous flags and
-counters, the purposes of which should be obvious from the source code
-and its internal documentation. The class has just two major public
+chessboards and the pieces thereon. The board itself is represented by
+a privately-declared 64-element array, each cell containing an
+\texttt{enum} value representing the type and colour of the piece.
+There are also numerous flags and counters, the purposes of which
+should be obvious from the source code and its internal documentation.
+The class has just two major public
 functions---\texttt{can{\textunderscore}move()}, which returns a
 boolean value indicating whether or not a given move is valid; and
 \texttt{do{\textunderscore}move()}, which actually performs a move,
@@ -131,10 +114,10 @@ permitting the implementation of the board and pieces to be changed
 without having to modify the other functions in the class or its
 friends. Even the board arithmetic is self-contained to a
 degree---individual squares are represented not by integers 0 to 63
-but by enum constants \texttt{a1} to \texttt{h8}, and incrementing
-ranks and files is done using constants \texttt{Rank} and
+but by \texttt{enum} constants \texttt{a1} to \texttt{h8}, and
+incrementing ranks and files is done using constants \texttt{Rank} and
 \texttt{File}. This data hiding would make it easy to change the board
-array to, say, the popular 10 $\times$ 12 or 0x88 formats
+array to, say, the popular 10\,$\times$\,12 or 0x88 formats
 \cite{eppstein}.
 
 The remaining three classes define the players. At the top of the
@@ -144,10 +127,9 @@ template for its two derived classes, \texttt{HumanPlayer} and
 small and contains no executable functions. It has just three main
 members: one boolean flag indicating whether the player is human, and
 two pure virtual functions, the first of which is used to get commands
-from the player, and the second to modify his\footnote{Read ``his'' as
-  ``his or her'' for the entirety of this document.} stats. In
-\texttt{HumanPlayer}, the first function prints out the familiar
-command prompt and relays the input back to the main program, while in
+from the player, and the second to modify his stats. In
+\texttt{HumanPlayer}, the first function prints out the command prompt
+and relays the input back to the main program, while in
 \texttt{ComputerPlayer} it runs the minimax search algorithm to come
 up with the optimal move.  The second function, while vestigial in
 \texttt{HumanPlayer}, is used in the other class to set the weights
@@ -176,19 +158,17 @@ files; thus, the span between two fixed squares is not always
 equidistant for queens and rooks. Using the standard (Euclidean) means
 of computing distance is not feasible, even as an approximation, as it
 uses relatively slow floating-point calculations.  Thus, functions
-were derived for actual piece-wise distance, which were later found to
-have been previously discovered and named by mathematicians
-\cite{wilson}.  ``Rook-wise'' distance is known in mathematics as
-Manhattan distance, and is represented by the following general
-formula: \[ D(x, y) = \sum_{i=1}^{m} \left|x_i - y_i\right|. \]
-``Queen-wise'' distance, known as Chebychev distance, is given by the
-following function: \[ D(x, y) = \max_{i=1}^{m} \left|x_i -
-  y_i\right|. \] Kings, which move the same as queens, also use
-Chebychev distance. Except that they can only reach half the squares
-on a chessboard, bishops also measure distance Chebychev-style. For
-knights and their unusual L-shaped moves, no suitable distance
-function could be found, so either of the above-noted functions is
-used as an approximation in the program.
+were written for the actual piece-wise distance \cite{wilson}.
+``Rook-wise'' distance, known in mathematics as Manhattan distance, is
+represented by the following general formula: \[ D(x, y) =
+\sum_{i=1}^{m} \left|x_i - y_i\right|. \] ``Queen-wise'' distance,
+known as Chebychev distance, is given by the following function: \[
+D(x, y) = \max_{i=1}^{m} \left|x_i - y_i\right|. \] Kings, which move
+the same as queens, also use Chebychev distance. Except that they can
+only reach half the squares on a chessboard, bishops also measure
+distance Chebychev-style. For knights and their unusual L-shaped
+moves, no suitable distance function could be found, so either of the
+above-noted functions is used as an approximation in the program.
 
 Following is a detailed description of the static evaluator; any
 numerical constants cited refer to default values which may be changed
@@ -217,11 +197,11 @@ Bishops also have a base value of 330 points. The presence of both
 king's and queen's bishops is necessary to avoid a penalty of 20
 points. Individual bishops receive bonuses for proximity to centre,
 calculated and weighted (by default) in the same manner as for
-knights. Bishops also receive a bonus for mobility and X-ray mobility
-through pieces except pawns. This bonus is 1 point for every square
-under attack, plus a one-time 8-point bonus for attacks on an enemy
-queen, rook, or king. The weights for the mobility and X-ray mobility
-attacks are separately adjustable.
+knights. Bishops also receive a bonus for mobility and ``X-ray''
+mobility through pieces except pawns. This bonus is 1 point for every
+square under attack, plus a one-time 8-point bonus for attacks on an
+enemy queen, rook, or king. The weights for the mobility and X-ray
+mobility attacks are separately adjustable.
 
 A rook is worth 500 points initially. Rooks receive a bonus for
 inverse Manhattan distance to the enemy king; the bonus increases by
@@ -286,7 +266,7 @@ program will generally avoid such a condition.
 
 \subsection{User interface}
 
-\textsc{Cheops} features only a simple ASCII board display and
+\textsc{Cheops} features only a simple text board display and
 command-line interface reminiscent of GNU Chess \cite{gnuchess}.
 Rather than have the static evaluation function weights read from a
 file, as originally planned, a menu-based system was implemented
@@ -302,13 +282,13 @@ to add a system-dependent GUI for input and output.
 
 \section{Licence}
 
-This manual and the software it accompanies \copyright 1999, 2000
-Tristan Miller.  \textsc{Cheops} is Free Software. It can be freely
-used, modified, and distributed under the terms of the GNU General
-Public Licence.  You should have received a copy of the GNU General
-Public Licence along with this program in the file LICENCE; if not,
-write to the Free Software Foundation, Inc., 59 Temple Place---Suite
-330, Boston, MA 02111--1307, USA.
+This manual and the software it accompanies is Copyright \copyright\ 
+1999, 2000, 2003 Tristan Miller.  \textsc{Cheops} is Free Software. It
+can be freely used, modified, and distributed under the terms of the
+GNU General Public Licence.  You should have received a copy of the
+GNU General Public Licence along with this program in the file
+COPYING; if not, write to the Free Software Foundation, Inc., 59
+Temple Place---Suite 330, Boston, MA 02111--1307, USA.
 
 \begin{thebibliography}{99}
 
@@ -322,10 +302,6 @@ write to the Free Software Foundation, Inc., 59 Temple Place---Suite
 \bibitem{crayblitz} Hyatt, R.~M., A.~E.~Gower and H.~L.~Nelson.
   ``Cray Blitz.'' \emph{Computers, Chess, and Cognition}.  New York:
   Springer--Verlag, 1989.
-
-\bibitem{smaaland} Smaaland, G.  \emph{Computer Chess
-    Programming}.  \url{http://www.mi.uib.no/~gautes/cchess.html}
-  (1 July 1999)
 
 \bibitem{stanback} Stanback, J.  ``Heuristic descriptions for
   \emph{CHESS}.''  \emph{GNU Chess}.  Free Software Foundation, 1987.
