@@ -1,7 +1,7 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 #
-# $Id: configure.in,v 1.1 2003-12-06 17:34:52 psy Exp $
+# $Id: configure.ac,v 1.1 2003-12-06 17:50:01 psy Exp $
 
 AC_PREREQ(2.57)
 AC_INIT(cheops, 1.1, psychonaut@nothingisreal.com)
