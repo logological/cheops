@@ -1,4 +1,4 @@
-# $Id: Makefile.am,v 1.1 2003-12-06 18:29:30 psy Exp $
+# $Id: Makefile.am,v 1.2 2003-12-06 20:19:49 psy Exp $
 #
 # Copyright (C) 2003 Tristan Miller <psychonaut@nothingisreal.com>
 #  
@@ -11,6 +11,6 @@
 # PURPOSE.
 
 #EXTRA_DIST = configure
-SUBDIRS = doc src
+SUBDIRS = src
 
 
