@@ -1,7 +1,7 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 #
-# $Id: configure.ac,v 1.2 2003-12-06 18:05:08 psy Exp $
+# $Id: configure.ac,v 1.3 2003-12-06 18:24:29 psy Exp $
 
 AC_PREREQ(2.57)
 AC_INIT(cheops, 1.1, psychonaut@nothingisreal.com)
@@ -20,5 +20,5 @@ AC_PROG_CXX
 
 # Checks for library functions.
 
-AC_CONFIG_FILES([src/Makefile])
+AC_CONFIG_FILES([Makefile src/Makefile])
 AC_OUTPUT

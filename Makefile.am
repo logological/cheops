@@ -1,4 +1,4 @@
-# $Id: Makefile.am,v 1.3 2003-12-06 18:28:12 psy Exp $
+# $Id: Makefile.am,v 1.1 2003-12-06 18:29:30 psy Exp $
 #
 # Copyright (C) 2003 Tristan Miller <psychonaut@nothingisreal.com>
 #  
@@ -10,7 +10,7 @@
 # the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR
 # PURPOSE.
 
-bin_PROGRAMS = cheops
-cheops_SOURCES = cheops.cpp ChessBoard.cpp ComputerPlayer.cpp HumanPlayer.cpp move.cpp Player.cpp StdAfx.cpp
+#EXTRA_DIST = configure
+SUBDIRS = doc src
 
 
