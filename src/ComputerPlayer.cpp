@@ -1,3 +1,5 @@
+// $Id: ComputerPlayer.cpp,v 1.2 2003-11-24 21:10:20 psy Exp $
+//
 // ComputerPlayer.cpp: implementation of the ComputerPlayer class.
 //
 //////////////////////////////////////////////////////////////////////

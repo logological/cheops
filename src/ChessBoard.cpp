@@ -1,3 +1,5 @@
+// $Id: ChessBoard.cpp,v 1.2 2003-11-24 21:08:10 psy Exp $
+//
 // ChessBoard.cpp: implementation of the ChessBoard class.
 //
 //////////////////////////////////////////////////////////////////////

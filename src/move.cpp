@@ -1,3 +1,5 @@
+// $Id: move.cpp,v 1.2 2003-11-24 21:14:27 psy Exp $
+//
 // move.cpp: implementation of the move struct.
 //
 //////////////////////////////////////////////////////////////////////
@@ -39,4 +41,3 @@ move::operator string() const {
     }
     return s;
 }
-

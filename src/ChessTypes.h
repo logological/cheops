@@ -1,13 +1,11 @@
+// $Id: ChessTypes.h,v 1.2 2003-11-24 21:09:35 psy Exp $
+//
 // ChessTypes.h
 //
 //////////////////////////////////////////////////////////////////////
 
 #if !defined(AFX_CHESSTYPES_H__EBEFC225_5256_11D3_BC7B_0080C84DB68D__INCLUDED_)
 #define AFX_CHESSTYPES_H__EBEFC225_5256_11D3_BC7B_0080C84DB68D__INCLUDED_
-
-#if _MSC_VER > 1000
-#pragma once
-#endif // _MSC_VER > 1000
 
 enum game_status {
     Normal, Check, Checkmate, Stalemate, TripleOccurrence, FiftyMoves

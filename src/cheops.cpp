@@ -1,8 +1,6 @@
-// cheops.cpp : Defines the entry point for the console application.
+// $Id: cheops.cpp,v 1.2 2003-11-24 21:14:13 psy Exp $
 //
-// 14/08/1999: v0.99
-// 28/05/2000: v1.00
-// 18/02/2002: v1.01
+// cheops.cpp : Defines the entry point for the console application.
 
 #include "stdafx.h"
 #include "ChessBoard.h"

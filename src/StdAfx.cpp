@@ -1,8 +1,5 @@
+// $Id: StdAfx.cpp,v 1.2 2003-11-24 21:12:54 psy Exp $
+//
 // stdafx.cpp : source file that includes just the standard includes
-//  cheops.pch will be the pre-compiled header
-//  stdafx.obj will contain the pre-compiled type information
 
 #include "stdafx.h"
-
-// TODO: reference any additional headers you need in STDAFX.H
-// and not in this file

@@ -1,13 +1,11 @@
+// $Id: ComputerPlayer.h,v 1.2 2003-11-24 21:11:14 psy Exp $
+//
 // ComputerPlayer.h: interface for the ComputerPlayer class.
 //
 //////////////////////////////////////////////////////////////////////
 
 #if !defined(AFX_COMPUTERPLAYER_H__EBEFC222_5256_11D3_BC7B_0080C84DB68D__INCLUDED_)
 #define AFX_COMPUTERPLAYER_H__EBEFC222_5256_11D3_BC7B_0080C84DB68D__INCLUDED_
-
-#if _MSC_VER > 1000
-#pragma once
-#endif // _MSC_VER > 1000
 
 #include "Player.h"
 
@@ -106,6 +104,5 @@ inline int ComputerPlayer::manhattan(int from, int to) const {
     return abs(ChessBoard::which_rank(from)-ChessBoard::which_rank(to)) +
         abs(ChessBoard::which_file(from)-ChessBoard::which_file(to));
 }
-
 
 #endif // !defined(AFX_COMPUTERPLAYER_H__EBEFC222_5256_11D3_BC7B_0080C84DB68D__INCLUDED_)

@@ -1,3 +1,5 @@
+// $Id: HumanPlayer.cpp,v 1.2 2003-11-24 21:10:45 psy Exp $
+//
 // HumanPlayer.cpp: implementation of the HumanPlayer class.
 //
 //////////////////////////////////////////////////////////////////////

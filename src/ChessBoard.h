@@ -1,13 +1,11 @@
+// $Id: ChessBoard.h,v 1.2 2003-11-24 21:08:43 psy Exp $
+//
 // ChessBoard.h: interface for the ChessBoard class.
 //
 //////////////////////////////////////////////////////////////////////
 
 #if !defined(AFX_CHESSBOARD_H__8478B260_34AF_11D3_BC7B_0080C84DB68D__INCLUDED_)
 #define AFX_CHESSBOARD_H__8478B260_34AF_11D3_BC7B_0080C84DB68D__INCLUDED_
-
-#if _MSC_VER > 1000
-#pragma once
-#endif // _MSC_VER > 1000
 
 #include "ChessTypes.h"
 #include "move.h"
@@ -141,7 +139,5 @@ inline piece_type ChessBoard::make_colour(piece_type p, bool white) const {
 inline piece_type ChessBoard::make_neutral(piece_type p) const {
     return p==Empty ? Empty : (piece_type)(p & ~Black);
 }
-
-
 
 #endif // !defined(AFX_CHESSBOARD_H__8478B260_34AF_11D3_BC7B_0080C84DB68D__INCLUDED_)

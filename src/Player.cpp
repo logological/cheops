@@ -1,3 +1,5 @@
+// $Id: Player.cpp,v 1.2 2003-11-24 21:12:02 psy Exp $
+//
 // Player.cpp: implementation of the Player class.
 //
 //////////////////////////////////////////////////////////////////////
