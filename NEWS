@@ -1,5 +1,5 @@
 Cheops NEWS -- history of user-visible changes
-$Date: 2003-12-07 19:22:01 $
+$Date: 2003-12-07 21:00:00 $
 
 Copyright (C) 2003 Tristan Miller.  See the end of this file for
 copying conditions.
@@ -13,7 +13,8 @@ Version 1.1
 * Cheops is now packaged in a manner similar to most GNU programs,
   including a `configure' configuration/installation script suitable
   for Unix-like systems.
-* The manual has been revised.
+* The LaTeX manual has been revised.
+* A Unix man page is now available.
 * The --version and --help command-line options are now supported.
 
 Version 1.0
