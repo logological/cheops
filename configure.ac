@@ -1,10 +1,11 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 #
-# $Id: configure.ac,v 1.1 2003-12-06 17:50:01 psy Exp $
+# $Id: configure.ac,v 1.2 2003-12-06 18:05:08 psy Exp $
 
 AC_PREREQ(2.57)
 AC_INIT(cheops, 1.1, psychonaut@nothingisreal.com)
+AM_INIT_AUTOMAKE
 AC_CONFIG_SRCDIR([src/ChessTypes.h])
 AC_CONFIG_HEADER([config.h])
 
