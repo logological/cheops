@@ -35,11 +35,14 @@ make DESTDIR=$RPM_BUILD_ROOT install-strip
 %defattr(-,root,root,-)
 %{_prefix}/bin/cheops
 %doc ChangeLog AUTHORS COPYING INSTALL NEWS README THANKS doc/cheops.pdf doc/cheops.dvi
-%doc %{_prefix}/man/man6/cheops.6.gz
+%doc %{_prefix}/share/man/man6/cheops.6.gz
 
 
 
 %changelog
+* Sun Feb  1 2015 Tristan Miller <psychonaut@nothingisreal.com> - 
+- Updated man path.
+
 * Fri Dec  4 2004 Tristan Miller <psychonaut@nothingisreal.com> - 
 - Initial build.
 
