@@ -1,4 +1,4 @@
-// $Id: stdafx.h,v 1.3 2003-12-06 16:44:51 psy Exp $
+// $Id$
 //
 // stdafx.h : include file for standard system include files,
 //  or project specific include files that are used frequently, but
@@ -32,6 +32,7 @@
 #include <iostream>
 #include <fstream>
 #include <cmath>
+#include <cstdlib>
 using namespace std;
 
 #endif // !defined(AFX_STDAFX_H__912A39AC_33E4_11D3_BC7B_0080C84DB68D__INCLUDED_)

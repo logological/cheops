@@ -1,4 +1,4 @@
-// $Id: HumanPlayer.h,v 1.3 2003-12-06 16:44:51 psy Exp $
+// $Id$
 //
 // HumanPlayer.h: interface for the HumanPlayer class.
 //

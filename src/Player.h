@@ -1,4 +1,4 @@
-// $Id: Player.h,v 1.3 2003-12-06 16:44:51 psy Exp $
+// $Id$
 //
 // Player.h: interface for the Player class.
 //

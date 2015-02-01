@@ -1,14 +1,19 @@
 CHEOPS NEWS -- history of user-visible changes
-$Date: 2003-12-07 21:05:13 $
+$Date$
 
-Copyright (C) 2003 Tristan Miller.  See the end of this file for
+Copyright (C) 2015 Tristan Miller.  See the end of this file for
 copying conditions.
 
 Please send CHEOPS bug reports to Tristan Miller
 <psychonaut@nothingisreal.com>.
 
 
-Version 1.1
+Version 1.2 (2015-02-01)
+
+* Fixed some problems which prevented compilation with modern
+  (and more standards-compliant) versions of GCC
+
+Version 1.1 (2003-12-08)
 
 * CHEOPS is now packaged in a manner similar to most GNU programs,
   including a `configure' configuration/installation script suitable
@@ -17,14 +22,14 @@ Version 1.1
 * A Unix man page is now available.
 * The --version and --help command-line options are now supported.
 
-Version 1.0
+Version 1.0 (2003-11-23)
 
 * Initial release
 
 ----------------------------------------------------------------------
 Copyright information:
 
-Copyright (C) 2003 Tristan Miller.
+Copyright (C) 2015 Tristan Miller.
 
    Permission is granted to anyone to make or distribute verbatim
    copies of this document as received, in any medium, provided that

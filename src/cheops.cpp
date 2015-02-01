@@ -1,4 +1,4 @@
-// $Id: cheops.cpp,v 1.6 2003-12-07 19:43:33 psy Exp $
+// $Id$
 //
 // cheops.cpp : Defines the entry point for the console application.
 //

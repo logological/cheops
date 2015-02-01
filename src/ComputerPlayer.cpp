@@ -1,8 +1,8 @@
-// $Id: ComputerPlayer.cpp,v 1.3 2003-12-06 16:44:51 psy Exp $
+// $Id$
 //
 // ComputerPlayer.cpp: implementation of the ComputerPlayer class.
 //
-// Copyright (C) 2003 Tristan Miller <psychonaut@nothingisreal.com>
+// Copyright (C) 2015 Tristan Miller <psychonaut@nothingisreal.com>
 //  
 // This program is free software; you can redistribute it and/or
 // modify it under the terms of the GNU General Public License as
@@ -23,6 +23,7 @@
 
 #include "stdafx.h"
 #include "ComputerPlayer.h"
+#include <climits>
 
 //////////////////////////////////////////////////////////////////////
 // Construction/Destruction

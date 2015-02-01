@@ -1,4 +1,4 @@
-# $Id: Makefile.am,v 1.4 2003-12-06 20:19:31 psy Exp $
+# $Id$
 #
 # Copyright (C) 2003 Tristan Miller <psychonaut@nothingisreal.com>
 #  

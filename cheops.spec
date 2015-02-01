@@ -1,6 +1,6 @@
 Summary: A chess program with configurable AI
 Name: cheops
-Version: 1.1
+Version: 1.2
 Release: 1
 License: GPL
 Group: Amusements/Games/Board/Chess
