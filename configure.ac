@@ -1,7 +1,6 @@
 #                                               -*- Autoconf -*-
 # Process this file with autoconf to produce a configure script.
 #
-# $Id$
 
 AC_PREREQ(2.57)
 AC_INIT(CHEOPS, 1.2, psychonaut@nothingisreal.com, cheops)

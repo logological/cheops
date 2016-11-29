@@ -1,4 +1,3 @@
-// $Id$
 //
 // ChessBoard.h: interface for the ChessBoard class.
 //

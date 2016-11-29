@@ -1,4 +1,3 @@
-// $Id$
 //
 // Player.h: interface for the Player class.
 //

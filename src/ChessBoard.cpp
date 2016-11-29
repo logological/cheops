@@ -1,4 +1,3 @@
-// $Id$
 //
 // ChessBoard.cpp: implementation of the ChessBoard class.
 //

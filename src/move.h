@@ -1,4 +1,3 @@
-// $Id$
 //
 // move.h: interface for the chessmove struct.
 //

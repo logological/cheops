@@ -1,4 +1,3 @@
-// $Id$
 //
 // Player.cpp: implementation of the Player class.
 //

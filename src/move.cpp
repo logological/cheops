@@ -1,4 +1,3 @@
-// $Id$
 //
 // move.cpp: implementation of the chessmove struct.
 //

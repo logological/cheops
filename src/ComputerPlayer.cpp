@@ -1,4 +1,3 @@
-// $Id$
 //
 // ComputerPlayer.cpp: implementation of the ComputerPlayer class.
 //

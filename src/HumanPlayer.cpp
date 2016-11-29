@@ -1,4 +1,3 @@
-// $Id$
 //
 // HumanPlayer.cpp: implementation of the HumanPlayer class.
 //

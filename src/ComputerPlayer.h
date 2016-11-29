@@ -1,4 +1,3 @@
-// $Id$
 //
 // ComputerPlayer.h: interface for the ComputerPlayer class.
 //
