@@ -93,7 +93,7 @@ void ComputerPlayer::set_stats() {
         &r_king_prox, &r_mobility, &r_xmobility, &r_pawns, &r_mobilitybonus,
         &r_xmobilitybonus, &q_material, &q_king_prox, &q_centre_prox,
         &k_centre_dist, &k_pawn, &k_castle, &ply, NULL};
-    char *desc[] = {"draw value", "endgame threshold", "pawn material",
+    const char *desc[] = {"draw value", "endgame threshold", "pawn material",
         "doubled pawn", "backward pawn", "pawn proximity to opposite edge",
         "isolated pawn on file 1 or 8", "isolated pawn on file 2 or 7",
         "isolated pawn on file 3 or 6", "isolated pawn on file 4 or 5",
