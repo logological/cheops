@@ -307,7 +307,7 @@ void show_help(void) {
 void show_version(void) {
   cout <<
     PACKAGE_STRING "\n"
-    "Copyright (C) 1999-2015 Tristan Miller\n"
+    "Copyright (C) 1999-2016 Tristan Miller\n"
     "This is free software; see the source for copying conditions.  There is NO\n"
     "warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n"
     ;
