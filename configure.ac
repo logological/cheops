@@ -5,7 +5,7 @@
 
 AC_PREREQ(2.57)
 AC_INIT(CHEOPS, 1.2, psychonaut@nothingisreal.com, cheops)
-AM_INIT_AUTOMAKE
+AM_INIT_AUTOMAKE([foreign]) # Suppress error about missing ChangeLog
 AC_CONFIG_SRCDIR([src/ChessTypes.h])
 AC_CONFIG_HEADER([config.h])
 
