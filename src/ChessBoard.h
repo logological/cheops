@@ -38,10 +38,10 @@ public:
     virtual ~ChessBoard();
     void print(ostream *os) const;
     bool can_move(int from, int to, piece_type promotion=Empty) const;
-    bool can_move(const move &m) const
+    bool can_move(const chessmove &m) const
         {return can_move(m.from, m.to, m.promotion);}
     game_status do_move(int from, int to, piece_type promotion=Empty);
-    game_status do_move(const move& m)
+    game_status do_move(const chessmove& m)
         {return do_move(m.from, m.to, m.promotion);}
     bool white_moves(void) const;
     static bool show_reverse;
@@ -68,7 +68,7 @@ private:
 
     bool triple_occurrence(void) const;
     bool is_attacked(bool by_white, int to) const;
-    bool causes_check(const move& m) const;
+    bool causes_check(const chessmove& m) const;
     bool is_in_check(bool white) const;
     bool is_black(piece_type p) const;
     bool is_white(piece_type p) const;

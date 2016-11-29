@@ -141,7 +141,7 @@ void ComputerPlayer::set_stats() {
 // -------------------------------------------------------------------
 string ComputerPlayer::get_command(const ChessBoard &b) const {
     if (b.in_progress) {
-        move mv;
+        chessmove mv;
         long v=alphabeta(b, ply,-LONG_MAX,LONG_MAX,mv);
         // To offer draw:
         // if v<DRAW_THRESHOLD && haven't_offered_draw_in_a_while then
@@ -296,7 +296,7 @@ long ComputerPlayer::get_score(const ChessBoard &b) const {
 // Alpha beta game tree search
 // -------------------------------------------------------------------
 long ComputerPlayer::alphabeta(const ChessBoard &b, long depth, long alpha,
-    long beta, move &chosen_move) const {
+    long beta, chessmove &chosen_move) const {
     if (depth==0)
         return get_score(b);
 
@@ -305,7 +305,7 @@ long ComputerPlayer::alphabeta(const ChessBoard &b, long depth, long alpha,
         return get_score(b);
 
     long best_score=-LONG_MAX;
-    move best_move=*(moves.begin());
+    chessmove best_move=*(moves.begin());
     for (move_list::iterator i=moves.begin();
         i!=moves.end() && best_score<beta; ++i) {
         ChessBoard c=b;

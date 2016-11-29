@@ -1,6 +1,6 @@
 // $Id$
 //
-// move.h: interface for the move struct.
+// move.h: interface for the chessmove struct.
 //
 // Copyright (C) 2003 Tristan Miller <psychonaut@nothingisreal.com>
 //  
@@ -26,15 +26,15 @@
 
 #include "ChessTypes.h"
 
-struct move {
+struct chessmove {
     int from;
     int to;
     piece_type promotion;
     operator string() const;
 };
 
-typedef list<move> move_list;
+typedef list<chessmove> move_list;
 
-ostream &operator<<(ostream &os, const move &m);
+ostream &operator<<(ostream &os, const chessmove &m);
 
 #endif // !defined(AFX_MOVE_H__EBEFC224_5256_11D3_BC7B_0080C84DB68D__INCLUDED_)

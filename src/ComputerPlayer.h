@@ -78,7 +78,7 @@ private:
     int manhattan(int from, int to) const;
     move_list get_all_moves(const ChessBoard &b) const;
     long get_score(const ChessBoard &b) const;
-    long alphabeta(const ChessBoard &b, long depth, long alpha, long beta, move &chosen_move) const;
+    long alphabeta(const ChessBoard &b, long depth, long alpha, long beta, chessmove &chosen_move) const;
     bool adjacent_friendly_pawns(const ChessBoard &b, int sq) const;
     long rook_mobility(const ChessBoard &b, int from) const;
     long bishop_mobility(const ChessBoard &b, int from) const;

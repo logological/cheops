@@ -33,7 +33,7 @@
 #include <cstring>
 
 void show_menu(void);
-move *parse_move(const string& s);
+chessmove *parse_move(const string& s);
 void who_plays(Player *&w, Player *&b);
 void show_help(void);
 void show_version(void);
@@ -44,7 +44,7 @@ int main(int argc, char* argv[]) {
     Player *w_player=NULL, *b_player=NULL, *this_player;
     string cmd, log;
     game_status status=Normal;
-    move *m = NULL;
+    chessmove *m = NULL;
     int turn=0;
 
     // Process command-line parameters
@@ -123,14 +123,14 @@ int main(int argc, char* argv[]) {
             delete m;
             // Kingside castling
             if (cmd=="o-o") {
-                m = new move;
+                m = new chessmove;
                 m->promotion=Empty;
                 m->from=this_player==w_player?e1:e8;
                 m->to=this_player==w_player?g1:g8;
             }
             // Queenside castling
             else if (cmd=="o-o-o") {
-                m = new move;
+                m = new chessmove;
                 m->promotion=Empty;
                 m->from=this_player==w_player?e1:e8;
                 m->to=this_player==w_player?c1:c8;
@@ -208,9 +208,9 @@ void show_menu(void) {
 
 // -------------------------------------------------------------------
 // Parse move
-//  - returns pointer to a move structure on success, else NULL
+//  - returns pointer to a chessmove structure on success, else NULL
 // -------------------------------------------------------------------
-move *parse_move(const string& s) {
+chessmove *parse_move(const string& s) {
 
     // Is this a valid move string?
     int len=s.length();
@@ -221,7 +221,7 @@ move *parse_move(const string& s) {
         return NULL;
 
     // Determine promotion type
-    move *m = new move;
+    chessmove *m = new chessmove;
     if (len==5) {
         switch(s[4]) {
         case 'q':

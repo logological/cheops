@@ -1,6 +1,6 @@
 // $Id$
 //
-// move.cpp: implementation of the move struct.
+// move.cpp: implementation of the chessmove struct.
 //
 // Copyright (C) 2003 Tristan Miller <psychonaut@nothingisreal.com>
 //  
@@ -27,14 +27,14 @@
 // -------------------------------------------------------------------
 // Print move (<< operator overload)
 // -------------------------------------------------------------------
-ostream &operator<<(ostream &os, const move &m) {
+ostream &operator<<(ostream &os, const chessmove &m) {
     return os << (string)m;
 }
 
 // -------------------------------------------------------------------
 // Cast move to string
 // -------------------------------------------------------------------
-move::operator string() const {
+chessmove::operator string() const {
     static char s[6]="\0\0\0\0\0";
     s[0] = (char)(ChessBoard::which_file(this->from)+'a');
     s[1] = (char)(ChessBoard::which_rank(this->from)+'1');

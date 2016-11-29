@@ -401,7 +401,7 @@ bool ChessBoard::can_move(int from, int to, piece_type promotion) const {
 //  - returns a list of all squares where the king may move
 // -------------------------------------------------------------------
 move_list ChessBoard::mobility_king(int from) const {
-    move m;
+    chessmove m;
     move_list ml;
     m.promotion=Empty;
     m.from=from;
@@ -457,7 +457,7 @@ move_list ChessBoard::mobility_king(int from) const {
 //  - returns a list of all squares where the knight may move
 // -------------------------------------------------------------------
 move_list ChessBoard::mobility_knight(int from) const {
-    move m;
+    chessmove m;
     move_list ml;
     m.promotion=Empty;
     m.from=from;
@@ -482,7 +482,7 @@ move_list ChessBoard::mobility_knight(int from) const {
 //  - returns a list of all squares where the pawn may move
 // -------------------------------------------------------------------
 move_list ChessBoard::mobility_pawn(int from) const {
-    move m;
+    chessmove m;
     move_list ml;
     m.promotion=Empty;
     m.from=from;
@@ -540,7 +540,7 @@ move_list ChessBoard::mobility_pawn(int from) const {
 //  - returns a list of all squares where the rook may move
 // -------------------------------------------------------------------
 move_list ChessBoard::mobility_rook(int from) const {
-    move m;
+    chessmove m;
     move_list ml;
     m.promotion=Empty;
     m.from=from;
@@ -568,7 +568,7 @@ move_list ChessBoard::mobility_rook(int from) const {
 //  - returns a list of all squares where the bishop may move
 // -------------------------------------------------------------------
 move_list ChessBoard::mobility_bishop(int from) const {
-    move m;
+    chessmove m;
     move_list ml;
     m.promotion=Empty;
     m.from=from;
@@ -681,7 +681,7 @@ bool ChessBoard::is_attacked(bool by_white, int to) const {
 // -------------------------------------------------------------------
 // Determine whether the given move puts one's own king in check
 // -------------------------------------------------------------------
-bool ChessBoard::causes_check(const move& m) const {
+bool ChessBoard::causes_check(const chessmove& m) const {
     bool w_turn=is_white(square[m.from]);
     ChessBoard c=*this;
     piece_type promotion=m.promotion;
