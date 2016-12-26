@@ -1,13 +1,14 @@
 Summary: A chess program with configurable AI
 Name: cheops
-Version: 1.2
-Release: 1
-License: GPL
+Version: 1.3
+Release: 0
+License: GPL-2.0+
 Group: Amusements/Games/Board/Chess
-URL: http://www.nothingisreal.com/cheops/
-Source0: http://www.nothingisreal.com/cheops/%{name}-%{version}.tar.bz2
+URL: https://logological.org/%{name}
+Source0: https://files.nothingisreal.com/software/%{name}/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
-Prefix: %{_prefix}
+BuildRequires: gcc-c++
+BuildRequires: gzip
 
 %description
 CHEOPS (CHEss OPponent Simulator) is a fully-functional chess program
@@ -20,29 +21,26 @@ considers material, mobility, and motif features.
 %setup -q
 
 %build
-./configure --prefix=%{_prefix}
-make
+%{_configure} --prefix=%{_prefix}
+%{__make}
 
 %install
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
-make DESTDIR=$RPM_BUILD_ROOT install-strip
+[ "%{buildroot}" != "/" ] && %{__rm} -rf %{buildroot}
+%{__make} DESTDIR=%{buildroot} install-strip
 
 %clean
-[ "$RPM_BUILD_ROOT" != "/" ] && rm -rf $RPM_BUILD_ROOT
+[ "%{buildroot}" != "/" ] && %{__rm} -rf %{buildroot}
 
 
 %files
 %defattr(-,root,root,-)
-%{_prefix}/bin/cheops
-%doc ChangeLog AUTHORS COPYING INSTALL NEWS README THANKS doc/cheops.pdf doc/cheops.dvi
-%doc %{_prefix}/share/man/man6/cheops.6.gz
+%{_bindir}/cheops
+%doc ChangeLog AUTHORS COPYING INSTALL NEWS README THANKS doc/cheops.pdf
+%doc %{_mandir}/man6/cheops.6.gz
 
 
 
 %changelog
-* Sun Feb  1 2015 Tristan Miller <psychonaut@nothingisreal.com> - 
-- Updated man path.
-
-* Fri Dec  4 2004 Tristan Miller <psychonaut@nothingisreal.com> - 
+* Mon Dec 26 2016 Tristan Miller <psychonaut@nothingisreal.com> - 
 - Initial build.
 
