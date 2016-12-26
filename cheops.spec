@@ -35,7 +35,7 @@ considers material, mobility, and motif features.
 %files
 %defattr(-,root,root,-)
 %{_bindir}/cheops
-%doc ChangeLog AUTHORS COPYING INSTALL NEWS README THANKS doc/cheops.pdf
+%doc AUTHORS COPYING INSTALL NEWS README.md THANKS doc/cheops.pdf
 %doc %{_mandir}/man6/cheops.6.gz
 
 

@@ -10,7 +10,7 @@
 
 AUTOMAKE_OPTIONS = dist-bzip2 dist-zip
 man_MANS = doc/cheops.6
-EXTRA_DIST = doc/cheops.tex doc/cheops.pdf $(man_MANS)
+EXTRA_DIST = doc/cheops.tex $(man_MANS)
 SUBDIRS = src
 
 
