@@ -1,5 +1,4 @@
-#
-# Copyright (C) 2003 Tristan Miller <psychonaut@nothingisreal.com>
+# Copyright (C) 2003-2016 Tristan Miller <psychonaut@nothingisreal.com>
 #  
 # This file is free software; the author gives unlimited permission to
 # copy and/or distribute it, with or without modifications.
@@ -11,7 +10,7 @@
 
 AUTOMAKE_OPTIONS = dist-bzip2 dist-zip
 man_MANS = doc/cheops.6
-EXTRA_DIST = doc/cheops.tex doc/cheops.pdf doc/cheops.dvi $(man_MANS)
+EXTRA_DIST = doc/cheops.tex doc/cheops.pdf $(man_MANS)
 SUBDIRS = src
 
 

@@ -2,7 +2,7 @@ Summary: A chess program with configurable AI
 Name: cheops
 Version: 1.3
 Release: 0
-License: GPL-2.0+
+License: GPL-3.0+
 Group: Amusements/Games/Board/Chess
 URL: https://logological.org/%{name}
 Source0: https://files.nothingisreal.com/software/%{name}/%{name}-%{version}.tar.bz2
