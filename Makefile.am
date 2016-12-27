@@ -11,6 +11,13 @@
 AUTOMAKE_OPTIONS = dist-bzip2 dist-zip
 man_MANS = doc/cheops.6
 EXTRA_DIST = doc/cheops.tex $(man_MANS)
-SUBDIRS = src
+SUBDIRS = src doc
+doc_DATA = COPYING NEWS README
 
+README: README.md
+	cp $< $@
 
+ChangeLog: FORCE
+	gitlog-to-changelog >$@
+
+FORCE:
