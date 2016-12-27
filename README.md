@@ -21,7 +21,7 @@ file.
 The `doc` subdirectory contains a Unix man page describing how to use
 CHEOPS.  There is also a LaTeX file which contains the text of the man
 page plus information of interest to programmers wishing to understand
-or extend CHEOPS.  Only the man page is installed by default.
+or extend CHEOPS.
 
 The latest version of CHEOPS can be found at
 <https://logological.org/cheops>.
