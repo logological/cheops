@@ -8,7 +8,6 @@ URL: https://logological.org/%{name}
 Source0: https://files.nothingisreal.com/software/%{name}/%{name}-%{version}.tar.bz2
 BuildRoot: %{_tmppath}/%{name}-%{version}-%{release}-root
 BuildRequires: gcc-c++
-BuildRequires: gzip
 
 %description
 CHEOPS (CHEss OPponent Simulator) is a fully-functional chess program
@@ -21,12 +20,12 @@ considers material, mobility, and motif features.
 %setup -q
 
 %build
-%{_configure} --prefix=%{_prefix}
+%{_configure} --prefix=%{_prefix} --docdir=%{_docdir}/%{name}
 %{__make}
 
 %install
 [ "%{buildroot}" != "/" ] && %{__rm} -rf %{buildroot}
-%{__make} DESTDIR=%{buildroot} install-strip
+%{make_install}
 
 %clean
 [ "%{buildroot}" != "/" ] && %{__rm} -rf %{buildroot}
@@ -35,12 +34,12 @@ considers material, mobility, and motif features.
 %files
 %defattr(-,root,root,-)
 %{_bindir}/cheops
-%doc AUTHORS COPYING INSTALL NEWS README.md THANKS doc/cheops.pdf
+%{_docdir}/%{name}
 %doc %{_mandir}/man6/cheops.6.gz
 
 
 
 %changelog
-* Mon Dec 26 2016 Tristan Miller <psychonaut@nothingisreal.com> - 
+* Tue Dec 27 2016 Tristan Miller <psychonaut@nothingisreal.com> - 
 - Initial build.
 
