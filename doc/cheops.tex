@@ -1,17 +1,6 @@
-
 \documentclass[a4paper]{article}
 \usepackage{url}
-\usepackage{html}
 \usepackage{mdwlist}
-
-% Determines whether or not we are running pdflatex
-\newif\ifpdf
-\ifx\pdfoutput\undefined
-\pdffalse
-\else
-\pdftrue
-\pdfcompresslevel=9
-\fi
 
 \def\CC{{C\nolinebreak[4]\hspace{-.05em}\raisebox{.4ex}{\tiny\bf ++}}}
 
@@ -20,7 +9,7 @@
 \title{\textsc{Cheops} v1.3\\Manual for Users and Programmers}
 \author{Tristan Miller\\ \url{psychonaut@nothingisreal.com}\\ 
   \url{https://logological.org/cheops}}
-\date{26 December 2016}
+\date{27 December 2016}
 \maketitle
 
 \section{Introduction}
@@ -61,7 +50,7 @@ In addition to legal moves, the following commands are also available
 as responses for human players. At the end of a game, no further moves
 are possible, and one of these commands must be entered.
 
-\begin{latexonly}
+%\begin{latexonly}
 \renewenvironment{description}{%
   \begin{basedescript}{%
       \desclabelwidth{0.66in}\desclabelstyle{\nextlinelabel}%
@@ -69,7 +58,7 @@ are possible, and one of these commands must be entered.
 }{%
   \end{basedescript}%
 }
-\end{latexonly}
+%\end{latexonly}
 
 \begin{description}
 \item[\texttt{resign}] forfeit the match
