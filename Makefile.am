@@ -12,7 +12,11 @@ AUTOMAKE_OPTIONS = dist-bzip2 dist-zip
 man_MANS = doc/cheops.6
 EXTRA_DIST = doc/cheops.tex $(man_MANS) README.md
 SUBDIRS = src doc
-doc_DATA = COPYING NEWS AUTHORS THANKS README doc/cheops.pdf
+doc_DATA = COPYING NEWS AUTHORS THANKS README
+
+if HAVE_PDFLATEX
+doc_DATA += doc/cheops.pdf
+endif
 
 README: README.md
 	cp $< $@
